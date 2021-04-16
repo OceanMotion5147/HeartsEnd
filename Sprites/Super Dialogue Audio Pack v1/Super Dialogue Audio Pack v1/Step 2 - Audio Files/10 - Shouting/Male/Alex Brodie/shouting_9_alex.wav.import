@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/shouting_9_alex.wav-4f2d68959450e2f3e00c09ebf62c7f50.sample"
+
+[deps]
+
+source_file="res://Sprites/Super Dialogue Audio Pack v1/Super Dialogue Audio Pack v1/Step 2 - Audio Files/10 - Shouting/Male/Alex Brodie/shouting_9_alex.wav"
+dest_files=[ "res://.import/shouting_9_alex.wav-4f2d68959450e2f3e00c09ebf62c7f50.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

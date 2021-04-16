@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/confirmation_6_ian.wav-340495b3e4ccaac73488a0a133fb7ed8.sample"
+
+[deps]
+
+source_file="res://Sprites/Super Dialogue Audio Pack v1/Super Dialogue Audio Pack v1/Step 2 - Audio Files/2 - Confirmation/Male/Ian Lampert/confirmation_6_ian.wav"
+dest_files=[ "res://.import/confirmation_6_ian.wav-340495b3e4ccaac73488a0a133fb7ed8.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Curious_3.wav-37525da5140142e105ce6dd0f98466dc.sample"
+
+[deps]
+
+source_file="res://Sprites/GenericMale_VoicePack/Curious_3.wav"
+dest_files=[ "res://.import/Curious_3.wav-37525da5140142e105ce6dd0f98466dc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

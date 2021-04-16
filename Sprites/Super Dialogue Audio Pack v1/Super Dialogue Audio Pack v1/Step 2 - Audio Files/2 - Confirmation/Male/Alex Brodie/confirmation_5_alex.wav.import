@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/confirmation_5_alex.wav-47e2c8bdb6c57815d7a93d29017c663f.sample"
+
+[deps]
+
+source_file="res://Sprites/Super Dialogue Audio Pack v1/Super Dialogue Audio Pack v1/Step 2 - Audio Files/2 - Confirmation/Male/Alex Brodie/confirmation_5_alex.wav"
+dest_files=[ "res://.import/confirmation_5_alex.wav-47e2c8bdb6c57815d7a93d29017c663f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Uh huh_questionable.wav-30bcbee9e4fb537f2d5e7338ab1803b2.sample"
+
+[deps]
+
+source_file="res://Sprites/GenericMale_VoicePack/Uh huh_questionable.wav"
+dest_files=[ "res://.import/Uh huh_questionable.wav-30bcbee9e4fb537f2d5e7338ab1803b2.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

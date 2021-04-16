@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/damage_10_karen.wav-044fedb815f825dfbcc359013ef23f17.sample"
+
+[deps]
+
+source_file="res://Sprites/Super Dialogue Audio Pack v1/Super Dialogue Audio Pack v1/Step 2 - Audio Files/7 - Damage/Female/Karen Cenon/damage_10_karen.wav"
+dest_files=[ "res://.import/damage_10_karen.wav-044fedb815f825dfbcc359013ef23f17.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

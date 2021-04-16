@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Uh huh_positive.wav-8c3c3a6a788fca17ade93010d637f8ec.sample"
+
+[deps]
+
+source_file="res://Sprites/GenericMale_VoicePack/Uh huh_positive.wav"
+dest_files=[ "res://.import/Uh huh_positive.wav-8c3c3a6a788fca17ade93010d637f8ec.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
