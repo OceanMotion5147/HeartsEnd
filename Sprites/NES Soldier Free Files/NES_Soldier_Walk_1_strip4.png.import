@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ground_2.png-255505a1ff200b26f685d1b1c173b7ae.stex"
+path="res://.import/NES_Soldier_Walk_1_strip4.png-c1c26b34f633b8bdfdf2b89f8443918a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/TileSets/forest_tileset_lite/forest_tileset_lite/Sprites/Tile/Ground/ground_2.png"
-dest_files=[ "res://.import/ground_2.png-255505a1ff200b26f685d1b1c173b7ae.stex" ]
+source_file="res://Sprites/NES Soldier Free Files/NES_Soldier_Walk_1_strip4.png"
+dest_files=[ "res://.import/NES_Soldier_Walk_1_strip4.png-c1c26b34f633b8bdfdf2b89f8443918a.stex" ]
 
 [params]
 
