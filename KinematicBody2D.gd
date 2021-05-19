@@ -19,10 +19,12 @@ func _physics_process(delta):
 		$Sprite.play("Run")
 	else:
 		motion.x = 0
-		
+		$Sprite.play("Idle")
 	if is_on_floor():
 		if Input.is_action_just_pressed("Up"):
 			motion.y = JUMP_HEIGHT
+	else:
+		$Sprite.play("Jump")
 			
 	motion = move_and_slide(motion,UP)
 	pass
