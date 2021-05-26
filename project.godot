@@ -22,7 +22,6 @@ config/icon="res://icon.png"
 
 window/size/width=640
 window/size/height=423
-window/size/borderless=true
 window/stretch/aspect="keep"
 
 [input]
