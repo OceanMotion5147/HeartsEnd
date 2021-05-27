@@ -13,20 +13,20 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
+"frames": [ ExtResource( 8 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 7 ) ],
 "loop": true,
-"name": "Jump",
-"speed": 5.0
+"name": "Idle",
+"speed": 3.5
 }, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "Run",
 "speed": 7.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"frames": [ ExtResource( 6 ) ],
 "loop": true,
-"name": "Idle",
-"speed": 3.5
+"name": "Jump",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -42,7 +42,8 @@ __meta__ = {
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 0.468231, 0 )
+scale = Vector2( 0.526756, 0.5 )
 frames = SubResource( 1 )
 animation = "Run"
 frame = 2
@@ -50,3 +51,7 @@ frame = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.24018, -0.248016 )
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 0.5, 0.5 )
