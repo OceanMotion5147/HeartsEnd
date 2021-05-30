@@ -1,0 +1,42 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Coin.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation3.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation6.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation4.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation5.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation1.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation2.png" type="Texture" id=7]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.03009
+height = 3.86164
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Rotate",
+"speed": 12.0
+} ]
+
+[node name="Coin_0" type="Area2D"]
+position = Vector2( 328.596, 164.084 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0992126, 0.396851 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "Rotate"
+frame = 2
+playing = true
+
+[connection signal="body_entered" from="." to="." method="_on_Coin_0_body_entered"]
