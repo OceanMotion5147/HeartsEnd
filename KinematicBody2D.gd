@@ -10,14 +10,11 @@ var score = 0
 
 func _ready():
 	set_physics_process(true)
-	set_process(true)
-
-func _process(delta):
-	var LabelNode = get_parent().get_parent().get_node("Score Counter/UI/Base/RichTextLabel")
-	LabelNode.text = str(score)
 
 func _physics_process(delta):
 	motion.y += GRAVITY
+	var LabelNode = get_parent().get_node("Score Counter/CanvasLayer/Control/RichTextLabel")
+	LabelNode.text = str(score)
 	var friction = false
 	
 	if Input.is_action_pressed("Right"):
@@ -47,3 +44,7 @@ func _physics_process(delta):
 
 func _on_Coin_0_body_entered(body):
 	score += 1
+
+
+func _on_AmmoCache_body_entered(body):
+	score += 5
