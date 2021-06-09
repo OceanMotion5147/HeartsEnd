@@ -41,10 +41,5 @@ func _physics_process(delta):
 	motion = move_and_slide(motion,UP)
 	pass
 
-
-func _on_Coin_0_body_entered(body):
+func _on_AmmoTin_1_body_entered(body):
 	score += 1
-
-
-func _on_AmmoCache_body_entered(body):
-	score += 5

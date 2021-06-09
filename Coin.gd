@@ -2,6 +2,6 @@ extends Area2D
 
 
 
-func _on_Coin_0_body_entered(body):
+func _on_AmmoTin_1_body_entered(body):
 	queue_free()
 	pass # Replace with function body.

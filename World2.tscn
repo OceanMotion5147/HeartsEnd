@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ForestAutoTile.tres" type="TileSet" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://AmmoTin_1.tscn" type="PackedScene" id=4]
 
 [node name="Node" type="Node"]
 
@@ -18,3 +19,23 @@ tile_data = PoolIntArray( 458758, 2, 0, 458765, 2, 0, 524293, 1, 0, 524294, 1, 1
 [node name="WorldComplete" parent="." instance=ExtResource( 3 )]
 position = Vector2( 93.5298, 116.413 )
 world_scene = "res://World.tscn"
+
+[node name="Collectables" type="Node" parent="."]
+
+[node name="AmmoTin_1" parent="Collectables" instance=ExtResource( 4 )]
+position = Vector2( 358.893, 173.496 )
+
+[node name="AmmoTin_2" parent="Collectables" instance=ExtResource( 4 )]
+position = Vector2( 312.065, 157.622 )
+
+[node name="AmmoTin_3" parent="Collectables" instance=ExtResource( 4 )]
+position = Vector2( 264.046, 141.748 )
+
+[node name="AmmoTin_4" parent="Collectables" instance=ExtResource( 4 )]
+position = Vector2( 216.424, 142.145 )
+
+[node name="AmmoTin_5" parent="Collectables" instance=ExtResource( 4 )]
+position = Vector2( 167.215, 142.145 )
+
+[node name="AmmoTin_6" parent="Collectables" instance=ExtResource( 4 )]
+position = Vector2( 118.005, 125.874 )
