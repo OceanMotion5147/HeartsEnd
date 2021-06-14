@@ -10,12 +10,6 @@ var score = 0
 
 func _ready():
 	set_physics_process(true)
-	set_process(true)
-
-func _process(delta):
-	var LabelNode = get_parent().get_node("Score_Counter/CanvasLayer/Control/RichTextLabel")
-	LabelNode.text = str(score)
-
 
 func _physics_process(delta):
 	motion.y += GRAVITY

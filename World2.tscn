@@ -26,16 +26,29 @@ world_scene = "res://World.tscn"
 position = Vector2( 358.893, 173.496 )
 
 [node name="AmmoTin_2" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 312.065, 157.622 )
+position = Vector2( 311.008, 158.152 )
 
 [node name="AmmoTin_3" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 264.046, 141.748 )
+position = Vector2( 263.808, 142.242 )
 
 [node name="AmmoTin_4" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 216.424, 142.145 )
+position = Vector2( 215.868, 142.507 )
 
 [node name="AmmoTin_5" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 167.215, 142.145 )
+position = Vector2( 167.662, 142.772 )
 
 [node name="AmmoTin_6" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 118.005, 125.874 )
+position = Vector2( 114.785, 126.333 )
+
+[connection signal="body_entered" from="Collectables/AmmoTin_1" to="Collectables/AmmoTin_1" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_1" to="Player" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_2" to="Collectables/AmmoTin_2" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_2" to="Player" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_3" to="Collectables/AmmoTin_3" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_3" to="Player" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_4" to="Collectables/AmmoTin_4" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_4" to="Player" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_5" to="Collectables/AmmoTin_5" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_5" to="Player" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_6" to="Collectables/AmmoTin_6" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_6" to="Player" method="_on_AmmoTin_1_body_entered"]

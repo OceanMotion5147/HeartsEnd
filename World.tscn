@@ -47,5 +47,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="body_entered" from="Collectables/AmmoTin_1" to="Collectables/AmmoTin_1" method="_on_AmmoTin_1_body_entered"]
 [connection signal="body_entered" from="Collectables/AmmoTin_1" to="Player" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_1" to="Collectables/AmmoTin_1" method="_on_AmmoTin_1_body_entered"]
