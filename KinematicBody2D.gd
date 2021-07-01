@@ -41,3 +41,4 @@ func _physics_process(delta):
 
 func _on_AmmoTin_1_body_entered(body):
 	score += 1
+	print(score)
