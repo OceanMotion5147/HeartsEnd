@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Coin.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Coin.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation3.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation6.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/StrangeUndergroundPlatformer/StrangeUndergroundPlatformer/Sorted/Coin/CoinRotation4.png" type="Texture" id=4]

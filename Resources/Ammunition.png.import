@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeartLogo.png-a2dfcc7d46397be5e556b29a1b3217d8.stex"
+path="res://.import/Ammunition.png-814ad0345092ed140753392f54174418.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://HeartLogo.png"
-dest_files=[ "res://.import/HeartLogo.png-a2dfcc7d46397be5e556b29a1b3217d8.stex" ]
+source_file="res://Resources/Ammunition.png"
+dest_files=[ "res://.import/Ammunition.png-814ad0345092ed140753392f54174418.stex" ]
 
 [params]
 

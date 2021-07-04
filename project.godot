@@ -15,8 +15,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Hearts End"
-run/main_scene="res://StartupScreen.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scenes/StartupScreen.tscn"
+config/icon="res://Resources/icon.png"
+
+[autoload]
+
+PlayerStats="*res://Scripts/player_stats.gd"
 
 [display]
 

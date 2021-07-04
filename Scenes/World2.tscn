@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://ForestAutoTile.tres" type="TileSet" id=1]
-[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
-[ext_resource path="res://AmmoTin_1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/AmmoTin_1.tscn" type="PackedScene" id=4]
 
 [node name="Node" type="Node"]
 
@@ -28,27 +28,7 @@ position = Vector2( 358.893, 173.496 )
 [node name="AmmoTin_2" parent="Collectables" instance=ExtResource( 4 )]
 position = Vector2( 311.008, 158.152 )
 
-[node name="AmmoTin_3" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 263.808, 142.242 )
-
-[node name="AmmoTin_4" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 215.868, 142.507 )
-
-[node name="AmmoTin_5" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 167.662, 142.772 )
-
-[node name="AmmoTin_6" parent="Collectables" instance=ExtResource( 4 )]
-position = Vector2( 114.785, 126.333 )
-
-[connection signal="body_entered" from="Collectables/AmmoTin_1" to="Player" method="_on_AmmoTin_1_body_entered"]
 [connection signal="body_entered" from="Collectables/AmmoTin_1" to="Collectables/AmmoTin_1" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_2" to="Player" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_1" to="Player" method="_on_AmmoTin_1_body_entered"]
 [connection signal="body_entered" from="Collectables/AmmoTin_2" to="Collectables/AmmoTin_2" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_3" to="Collectables/AmmoTin_3" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_3" to="Player" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_4" to="Player" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_4" to="Collectables/AmmoTin_4" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_5" to="Player" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_5" to="Collectables/AmmoTin_5" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_6" to="Player" method="_on_AmmoTin_1_body_entered"]
-[connection signal="body_entered" from="Collectables/AmmoTin_6" to="Collectables/AmmoTin_6" method="_on_AmmoTin_1_body_entered"]
+[connection signal="body_entered" from="Collectables/AmmoTin_2" to="Player" method="_on_AmmoTin_1_body_entered"]
