@@ -6,7 +6,7 @@ const MAX_SPEED = 100
 const ACCELERATION = 50
 const JUMP_HEIGHT = -200
 var motion = Vector2()
-var score = 0
+var score
 
 func _ready():
 	set_physics_process(true)
@@ -39,6 +39,5 @@ func _physics_process(delta):
 	motion = move_and_slide(motion,UP)
 	pass
 
-func _on_AmmoTin_1_body_entered(body):
-	score += 1
-	print(score)
+
+
