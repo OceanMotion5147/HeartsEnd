@@ -1,5 +1,13 @@
 extends CanvasLayer
 
+var coins = 0
 
 func _ready():
-	pass
+	$Ammo.text = String(coins)
+
+
+
+func _on_ammo_collected():
+	coins = coins + 1
+	_ready()
+
