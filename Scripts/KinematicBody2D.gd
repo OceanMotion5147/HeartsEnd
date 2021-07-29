@@ -23,6 +23,12 @@ func _physics_process(delta):
 		motion.x = max(motion.x-ACCELERATION, -MAX_SPEED)
 		$Sprite.flip_h = true
 		$Sprite.play("Run")
+	elif Input.is_action_pressed("Punch"):
+		$Sprite.flip_h = true
+		$Sprite.play("PunchAttack")
+	elif Input.is_action_pressed("Kick"):
+		$Sprite.flip_h = true
+		$Sprite.play("KickAttack")
 	else:
 		motion.x = lerp(motion.x, 0, 0.2)
 		friction = true
