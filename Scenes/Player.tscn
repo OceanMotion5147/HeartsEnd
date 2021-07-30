@@ -21,6 +21,16 @@ animations = [ {
 "name": "PunchAttack",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Run",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 13 ) ],
 "loop": true,
 "name": "KickAttack",
@@ -30,16 +40,6 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 3.5
-}, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "Jump",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Run",
-"speed": 7.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -57,7 +57,7 @@ __meta__ = {
 position = Vector2( 0.707557, 0.686027 )
 scale = Vector2( 0.536556, 0.502327 )
 frames = SubResource( 1 )
-animation = "PunchAttack"
+animation = "Jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.24018, -0.248016 )
