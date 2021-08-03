@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemy_Run_West.png-41960a518fcf478c169953fbed5c10d5.stex"
+path="res://.import/EnemyRunWest2.png-2668611f35fd6acf11778e7660079787.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NES RPG Soldier FREE Files/Enemy Run/Enemy_Run_West.png"
-dest_files=[ "res://.import/Enemy_Run_West.png-41960a518fcf478c169953fbed5c10d5.stex" ]
+source_file="res://Sprites/NES RPG Soldier FREE Files/Enemy Run/EnemyRunWest2.png"
+dest_files=[ "res://.import/EnemyRunWest2.png-2668611f35fd6acf11778e7660079787.stex" ]
 
 [params]
 
