@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NES_Soldier_PUSHPULL_EAST_strip4.png-9011c11fc3540c1109513407a31136f7.stex"
+path="res://.import/EnemyMachineGunner.png-8fe9792c53c0f209385cecda42a91c2a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NES RPG Soldier FREE Files/PUSH PULL/NES_Soldier_PUSHPULL_EAST_strip4.png"
-dest_files=[ "res://.import/NES_Soldier_PUSHPULL_EAST_strip4.png-9011c11fc3540c1109513407a31136f7.stex" ]
+source_file="res://Sprites/NES RPG Soldier FREE Files/EnemyAttack/EnemyMachineGunner.png"
+dest_files=[ "res://.import/EnemyMachineGunner.png-8fe9792c53c0f209385cecda42a91c2a.stex" ]
 
 [params]
 
