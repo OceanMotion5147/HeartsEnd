@@ -11,6 +11,9 @@ func _ready():
 	$AnimatedSprite.play("Run")
 	
 func _process(_delta):
+	if $AnimatedSprite.animation == "Attack":
+		return
+	
 	move_character()
 	detect_turn_around()
 	
@@ -25,4 +28,17 @@ func detect_turn_around():
 		is_moving_left = !is_moving_left
 		scale.x = -scale.x
 
+func hit():
+	$AttackDetector.monitoring = true
+	
+func end_hit():
+	$AttackDetector.monitoring = false
+	
+func start_walk():
+	$AnimatedSprite.play("Run")
 
+func _on_PlayerDetector_body_entered(body):
+	$AnimatedSprite.play("Attack")
+
+func _on_AttackDetector_body_entered(body):
+	get_tree().reload_current_scene()
