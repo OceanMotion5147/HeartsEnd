@@ -34,11 +34,15 @@ func hit():
 func end_hit():
 	$AttackDetector.monitoring = false
 	
-func start_walk():
-	$AnimatedSprite.play("Run")
+func start_run():
+	if $AttackDetector.monitoring == false:
+		$AnimatedSprite.play("Run")
 
 func _on_PlayerDetector_body_entered(body):
 	$AnimatedSprite.play("Attack")
+	yield($AnimatedSprite,"animation_finished")
+	$AnimatedSprite.play("Run")
+	
 
 func _on_AttackDetector_body_entered(body):
 	get_tree().reload_current_scene()
