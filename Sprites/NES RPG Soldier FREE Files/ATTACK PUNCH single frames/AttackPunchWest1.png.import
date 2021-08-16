@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EnemyRunWest3.png-0ce011a6975ef39f4da78480a7158ea7.stex"
+path="res://.import/AttackPunchWest1.png-6d37d968158fde4e8b2421f67919a425.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/NES RPG Soldier FREE Files/Enemy Run/EnemyRunWest3.png"
-dest_files=[ "res://.import/EnemyRunWest3.png-0ce011a6975ef39f4da78480a7158ea7.stex" ]
+source_file="res://Sprites/NES RPG Soldier FREE Files/ATTACK PUNCH single frames/AttackPunchWest1.png"
+dest_files=[ "res://.import/AttackPunchWest1.png-6d37d968158fde4e8b2421f67919a425.stex" ]
 
 [params]
 
