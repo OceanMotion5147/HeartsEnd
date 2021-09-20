@@ -21,11 +21,6 @@ animations = [ {
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ) ],
-"loop": true,
-"name": "KickAttack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ) ],
 "loop": true,
 "name": "PunchAttack",
@@ -40,6 +35,11 @@ animations = [ {
 "loop": true,
 "name": "Idle",
 "speed": 3.5
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "KickAttack",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -66,3 +66,7 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 11 )]
+
+[node name="InvulnerabilityTimer" type="Timer" parent="."]
+wait_time = 0.8
+one_shot = true

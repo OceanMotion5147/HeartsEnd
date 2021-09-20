@@ -1,11 +1,12 @@
 extends KinematicBody2D
 
-var is_moving_left = true
 
+var is_moving_left = true
 var gravity = 10
 var velocity = Vector2(0,0)
-
 var speed = 32
+var damage = 100
+
 
 func _ready():
 	$AnimatedSprite.play("Run")
@@ -46,3 +47,4 @@ func _on_PlayerDetector_body_entered(body):
 
 func _on_AttackDetector_body_entered(body):
 	get_tree().reload_current_scene()
+	
