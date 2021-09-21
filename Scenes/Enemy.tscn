@@ -9,15 +9,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "Attack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "Run",
 "speed": 4.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Attack",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -30,7 +30,9 @@ extents = Vector2( 26.3332, 29.7652 )
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 24.265, 5.93217 )
 
-[node name="Enemy" type="KinematicBody2D"]
+[node name="Enemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
 script = ExtResource( 5 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -39,7 +41,9 @@ frames = SubResource( 1 )
 animation = "Run"
 frame = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=[
+"hurtbox",
+]]
 position = Vector2( -3.81035, -4.18963 )
 shape = SubResource( 2 )
 
@@ -54,7 +58,6 @@ collision_layer = 0
 collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
-visible = false
 position = Vector2( -51.4381, -14.7745 )
 shape = SubResource( 3 )
 
@@ -65,7 +68,6 @@ collision_layer = 0
 collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackDetector"]
-visible = false
 modulate = Color( 0.0784314, 0, 1, 1 )
 position = Vector2( -50.4834, -11.7591 )
 shape = SubResource( 4 )

@@ -21,16 +21,6 @@ animations = [ {
 "name": "Jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "PunchAttack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "Run",
-"speed": 7.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 1 ), ExtResource( 9 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "Idle",
@@ -40,9 +30,19 @@ animations = [ {
 "loop": true,
 "name": "KickAttack",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Run",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "PunchAttack",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=2]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 8.16382
 height = 27.5
 
@@ -53,20 +53,16 @@ script = ExtResource( 10 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0.707557, 0.686027 )
-scale = Vector2( 0.536556, 0.502327 )
+scale = Vector2( 0.537, 0.502 )
 frames = SubResource( 1 )
 animation = "PunchAttack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.24018, -0.248016 )
-shape = SubResource( 2 )
+position = Vector2( 0.77143, 0.220734 )
+shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 11 )]
-
-[node name="InvulnerabilityTimer" type="Timer" parent="."]
-wait_time = 0.8
-one_shot = true

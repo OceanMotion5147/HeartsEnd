@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Sprites/TileSets/AutoTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Scenes/AmmoTin_1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/FamiFont Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://HUD.gd" type="Script" id=8]
-[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/EnemyMachineGunner.tscn" type="PackedScene" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
@@ -135,10 +134,6 @@ __meta__ = {
 }
 
 [node name="Enemies" type="Node" parent="."]
-
-[node name="Enemy1" parent="Enemies" instance=ExtResource( 9 )]
-position = Vector2( 333.774, 152.006 )
-scale = Vector2( 0.142, 0.142 )
 
 [node name="EnemyMachineGunner" parent="Enemies" instance=ExtResource( 10 )]
 visible = false
