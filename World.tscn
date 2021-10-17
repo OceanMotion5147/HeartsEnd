@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Sprites/TileSets/AutoTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Scenes/AmmoTin_1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/FamiFont Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://HUD.gd" type="Script" id=8]
+[ext_resource path="res://Resources/HeartPixel.png" type="Texture" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.352941 )
@@ -24,6 +25,27 @@ use_filter = true
 font_data = ExtResource( 7 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 64
+outline_size = 1
+outline_color = Color( 1, 0, 1, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 0.352941 )
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
 size = 64
 outline_size = 1
 outline_color = Color( 1, 0, 1, 1 )
@@ -89,7 +111,9 @@ position = Vector2( 1534.98, 139.967 )
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 8 )
 
-[node name="Panel" type="Panel" parent="HUD"]
+[node name="AmmoCount" type="Node" parent="HUD"]
+
+[node name="Panel" type="Panel" parent="HUD/AmmoCount"]
 margin_left = 10.0
 margin_top = 13.0
 margin_right = 192.0
@@ -99,7 +123,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="HUD"]
+[node name="TextureRect" type="TextureRect" parent="HUD/AmmoCount"]
 margin_left = -19.0
 margin_top = -1.0
 margin_right = 116.0
@@ -107,12 +131,15 @@ margin_bottom = 106.0
 texture = ExtResource( 4 )
 expand = true
 stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="x" type="Label" parent="HUD"]
-margin_left = 82.4188
-margin_top = 32.9588
+[node name="x" type="Label" parent="HUD/AmmoCount"]
+margin_left = 82.419
+margin_top = 33.0
 margin_right = 122.419
-margin_bottom = 66.9588
+margin_bottom = 67.0
 custom_fonts/font = SubResource( 2 )
 text = "X"
 align = 1
@@ -121,12 +148,62 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Ammo" type="Label" parent="HUD"]
+[node name="Ammo" type="Label" parent="HUD/AmmoCount"]
 margin_left = 102.41
-margin_top = 20.7652
+margin_top = 20.0
 margin_right = 184.41
-margin_bottom = 84.7652
+margin_bottom = 84.0
 custom_fonts/font = SubResource( 3 )
+text = "##"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LifeCount" type="Node" parent="HUD"]
+
+[node name="Panel" type="Panel" parent="HUD/LifeCount"]
+margin_left = 197.0
+margin_top = 13.0
+margin_right = 379.0
+margin_bottom = 78.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="HUD/LifeCount"]
+margin_left = 200.0
+margin_top = 20.0
+margin_right = 268.0
+margin_bottom = 73.0
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="x" type="Label" parent="HUD/LifeCount"]
+margin_left = 261.5
+margin_top = 33.0
+margin_right = 301.5
+margin_bottom = 72.0
+custom_fonts/font = SubResource( 6 )
+text = "X"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Lives" type="Label" parent="HUD/LifeCount"]
+margin_left = 289.5
+margin_top = 20.0
+margin_right = 371.5
+margin_bottom = 84.0
+custom_fonts/font = SubResource( 7 )
 text = "##"
 align = 1
 valign = 1
@@ -137,7 +214,7 @@ __meta__ = {
 [node name="Enemies" type="Node" parent="."]
 
 [node name="fallzone" type="Area2D" parent="."]
-position = Vector2( 787.783, 462.51 )
+position = Vector2( 790.161, 507.7 )
 scale = Vector2( 136.668, -2.22068 )
 __meta__ = {
 "_edit_group_": true
