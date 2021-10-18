@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Sprites/TileSets/AutoTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://Resources/The Castle Elizah Italic.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://Scenes/AmmoTin_1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Resources/FamiFont Bold.ttf" type="DynamicFontData" id=7]
-[ext_resource path="res://HUD.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/HUD.gd" type="Script" id=8]
 [ext_resource path="res://Resources/HeartPixel.png" type="Texture" id=9]
-[ext_resource path="res://fallzone.gd" type="Script" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.352941 )
@@ -53,7 +52,7 @@ outline_color = Color( 1, 0, 1, 1 )
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=8]
 
 [node name="World" type="Node"]
 
@@ -217,14 +216,14 @@ __meta__ = {
 [node name="fallzone" type="Area2D" parent="."]
 position = Vector2( 790.161, 507.7 )
 scale = Vector2( 136.668, -2.22068 )
-script = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fallzone"]
-shape = SubResource( 7 )
+shape = SubResource( 8 )
 
+[connection signal="lost_life" from="Player" to="HUD" method="_on_Player_lost_life"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_1" to="HUD" method="_on_ammo_collected"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_2" to="HUD" method="_on_ammo_collected"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_3" to="HUD" method="_on_ammo_collected"]
@@ -236,4 +235,4 @@ shape = SubResource( 7 )
 [connection signal="ammo_collected" from="Collectables/AmmoTin_9" to="HUD" method="_on_ammo_collected"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_10" to="HUD" method="_on_ammo_collected"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_11" to="HUD" method="_on_ammo_collected"]
-[connection signal="body_entered" from="fallzone" to="fallzone" method="_on_fallzone_body_entered"]
+[connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]

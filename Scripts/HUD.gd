@@ -15,3 +15,8 @@ func _on_ammo_collected():
 	coins = coins + 1
 	_ready()
 
+
+# When player collides with fallzone they lose a life
+func _on_Player_lost_life():
+	lives = lives - 1
+	_ready()

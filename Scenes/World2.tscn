@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://ForestAutoTile.tres" type="TileSet" id=1]
+[ext_resource path="res://Sprites/TileSets/ForestAutoTile.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/AmmoTin_1.tscn" type="PackedScene" id=4]
