@@ -54,6 +54,6 @@ func _physics_process(delta):
 	motion = move_and_slide(motion,UP)
 	pass
 
-# When player collides with fall zone, the level is reset
+# When player collides with fall zone, the level is reset and signal is emitted
 func _on_fallzone_body_entered(body):
 	get_tree().change_scene("res://World.tscn")

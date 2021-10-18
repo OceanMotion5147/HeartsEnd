@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Sprites/TileSets/AutoTiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/WorldComplete.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Resources/FamiFont Bold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://HUD.gd" type="Script" id=8]
 [ext_resource path="res://Resources/HeartPixel.png" type="Texture" id=9]
+[ext_resource path="res://fallzone.gd" type="Script" id=10]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 0.352941 )
@@ -31,28 +32,28 @@ outline_color = Color( 1, 0, 1, 1 )
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0, 0, 0, 0.352941 )
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 size = 24
 outline_size = 1
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 7 )
 
-[sub_resource type="DynamicFont" id=7]
+[sub_resource type="DynamicFont" id=6]
 size = 64
 outline_size = 1
 outline_color = Color( 1, 0, 1, 1 )
 use_filter = true
 font_data = ExtResource( 5 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=7]
 
 [node name="World" type="Node"]
 
@@ -168,7 +169,7 @@ margin_left = 197.0
 margin_top = 13.0
 margin_right = 379.0
 margin_bottom = 78.0
-custom_styles/panel = SubResource( 5 )
+custom_styles/panel = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -190,7 +191,7 @@ margin_left = 261.5
 margin_top = 33.0
 margin_right = 301.5
 margin_bottom = 72.0
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 text = "X"
 align = 1
 valign = 1
@@ -198,12 +199,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Lives" type="Label" parent="HUD/LifeCount"]
+[node name="Life" type="Label" parent="HUD/LifeCount"]
 margin_left = 289.5
 margin_top = 20.0
 margin_right = 371.5
 margin_bottom = 84.0
-custom_fonts/font = SubResource( 7 )
+custom_fonts/font = SubResource( 6 )
 text = "##"
 align = 1
 valign = 1
@@ -216,12 +217,13 @@ __meta__ = {
 [node name="fallzone" type="Area2D" parent="."]
 position = Vector2( 790.161, 507.7 )
 scale = Vector2( 136.668, -2.22068 )
+script = ExtResource( 10 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="fallzone"]
-shape = SubResource( 4 )
+shape = SubResource( 7 )
 
 [connection signal="ammo_collected" from="Collectables/AmmoTin_1" to="HUD" method="_on_ammo_collected"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_2" to="HUD" method="_on_ammo_collected"]
@@ -234,4 +236,4 @@ shape = SubResource( 4 )
 [connection signal="ammo_collected" from="Collectables/AmmoTin_9" to="HUD" method="_on_ammo_collected"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_10" to="HUD" method="_on_ammo_collected"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_11" to="HUD" method="_on_ammo_collected"]
-[connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]
+[connection signal="body_entered" from="fallzone" to="fallzone" method="_on_fallzone_body_entered"]

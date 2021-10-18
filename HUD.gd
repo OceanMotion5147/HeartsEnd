@@ -5,7 +5,8 @@ var lives = 3
 
 # Shows the players score on screen
 func _ready():
-	$Ammo.text = String(coins)
+	$AmmoCount/Ammo.text = String(coins)
+	$LifeCount/Life.text = String(lives)
 	
 
 
