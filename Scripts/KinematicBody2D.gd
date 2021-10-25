@@ -11,6 +11,7 @@ const JUMP_HEIGHT = -200
 var motion = Vector2()
 var score
 
+
 func _ready():
 	set_physics_process(true)
 
@@ -57,9 +58,16 @@ func _physics_process(delta):
 	pass
 
 # When player collides with fall zone, the level is reset and signal is emitted
-
-
-
 func _on_fallzone_body_entered(body):
 	emit_signal("lost_life")
 	get_tree().change_scene("res://World.tscn")
+	
+
+
+
+func _on_Player_lost_life():
+	if PlayerStats.get_lives() == 0:
+		get_tree().quit
+	else:
+		PlayerStats.change_lives(-1)
+		_ready()
