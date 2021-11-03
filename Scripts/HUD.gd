@@ -10,7 +10,7 @@ func _ready():
 	
 
 
-# When player collides with amoo tin, counter goes up 1
+# When player collides with ammo tin, counter goes up 1
 func _on_ammo_collected():
 	coins = coins + 1
 	_ready()
