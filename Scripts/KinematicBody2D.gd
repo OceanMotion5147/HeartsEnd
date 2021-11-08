@@ -66,8 +66,6 @@ func _on_fallzone_body_entered(body):
 
 
 func _on_Player_lost_life():
-	if PlayerStats.get_lives() == 0:
+	if Livecounter.get_lives() == 0:
 		get_tree().quit
-	else:
-		PlayerStats.change_lives(-1)
-		_ready()
+
