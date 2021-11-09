@@ -7,16 +7,16 @@
 script = ExtResource( 2 )
 
 [node name="Live1" type="Sprite" parent="."]
-position = Vector2( 576, 64 )
-scale = Vector2( 0.025, 0.025 )
+position = Vector2( 608, 32 )
+scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 1 )
 
 [node name="Live2" type="Sprite" parent="."]
-position = Vector2( 544, 64 )
-scale = Vector2( 0.025, 0.025 )
+position = Vector2( 544, 32 )
+scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 1 )
 
 [node name="Live3" type="Sprite" parent="."]
-position = Vector2( 512, 64 )
-scale = Vector2( 0.025, 0.025 )
+position = Vector2( 480, 32 )
+scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 1 )

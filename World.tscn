@@ -71,10 +71,6 @@ tile_data = PoolIntArray( 196609, 1, 0, 196610, 1, 1, 196611, 1, 1, 196612, 1, 1
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 61.5893, 133.546 )
 
-[node name="Lives" parent="Player" instance=ExtResource( 11 )]
-position = Vector2( -153.973, -333.865 )
-scale = Vector2( 2.5, 2.5 )
-
 [node name="WorldComplete" parent="." instance=ExtResource( 2 )]
 visible = false
 position = Vector2( 1689.81, 196.5 )
@@ -83,7 +79,10 @@ world_scene = "res://World2.tscn"
 [node name="Collectables" type="Node" parent="."]
 
 [node name="AmmoTin_1" parent="Collectables" instance=ExtResource( 6 )]
-position = Vector2( -94.6725, 250.124 )
+position = Vector2( 146.452, 141.936 )
+
+[node name="AmmoTin_2" parent="Collectables" instance=ExtResource( 6 )]
+position = Vector2( 256.76, 269.216 )
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource( 8 )
@@ -192,10 +191,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Lives" parent="HUD/LifeCount" instance=ExtResource( 11 )]
+position = Vector2( 9.91821e-05, 0 )
+scale = Vector2( 1, 1 )
+
 [node name="Enemies" type="Node" parent="."]
 
-[node name="Area2D" parent="Enemies" instance=ExtResource( 10 )]
+[node name="SpikeTrap" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 110.612, 143.605 )
+scale = Vector2( 0.4, 0.4 )
+
+[node name="SpikeTrap2" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( 227.285, 272.299 )
 scale = Vector2( 0.4, 0.4 )
 
 [node name="fallzone" type="Area2D" parent="."]
@@ -211,4 +218,5 @@ shape = SubResource( 7 )
 
 [connection signal="lost_life" from="Player" to="Player" method="_on_Player_lost_life"]
 [connection signal="ammo_collected" from="Collectables/AmmoTin_1" to="HUD" method="_on_ammo_collected"]
+[connection signal="ammo_collected" from="Collectables/AmmoTin_2" to="HUD" method="_on_ammo_collected"]
 [connection signal="body_entered" from="fallzone" to="Player" method="_on_fallzone_body_entered"]
