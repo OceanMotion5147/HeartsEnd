@@ -6,7 +6,7 @@ const UP = Vector2(0, -1)
 const GRAVITY = 9.80665
 const MAX_SPEED = 100
 const ACCELERATION = 50
-const JUMP_HEIGHT = -200
+const JUMP_HEIGHT = -150
 
 var motion = Vector2()
 var score
