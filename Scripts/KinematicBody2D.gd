@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-signal lost_life
-
 const UP = Vector2(0, -1)
 const GRAVITY = 9.80665
 const MAX_SPEED = 100
@@ -59,13 +57,8 @@ func _physics_process(delta):
 
 # When player collides with fall zone, the level is reset and signal is emitted
 func _on_fallzone_body_entered(body):
-	emit_signal("lost_life")
 	get_tree().change_scene("res://World.tscn")
 	
 
 
-
-func _on_Player_lost_life():
-	if Livecounter.get_lives() == 0:
-		get_tree().quit
 

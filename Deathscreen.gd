@@ -1,6 +1,6 @@
 extends Control
 
-
+#Deathscreen that appears when player loses all lives. Only option is to quit game
 func _ready():
 	$QuitButton.grab_focus()
 

@@ -3,7 +3,7 @@ extends CanvasLayer
 var coins = 0
 var lives = 3
 
-# Shows the players score on screen
+# Shows the players score and lives on screen
 func _ready():
 	$AmmoCount/Ammo.text = String(coins)
 	$LifeCount/Life.text = String(lives)

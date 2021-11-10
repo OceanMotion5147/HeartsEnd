@@ -3,7 +3,7 @@ extends Node
 var lives
 var lives_max = 3
 var score
-
+#sets variables for counters on screen
 func _ready():
 	score = 0
 	lives = 3
