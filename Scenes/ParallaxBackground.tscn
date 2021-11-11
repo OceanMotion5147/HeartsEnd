@@ -5,29 +5,27 @@
 [ext_resource path="res://Sprites/FreeCuteTileset/BG3.png" type="Texture" id=3]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_limit_end = Vector2( 0, 270 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.1, 0.1 )
+motion_mirroring = Vector2( 640, 0 )
 
 [node name="Sky" type="Sprite" parent="ParallaxLayer"]
-position = Vector2( -400, -105 )
-scale = Vector2( 14, 5 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 1 )
-centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 640, 0 )
 
 [node name="SnowMountain" type="Sprite" parent="ParallaxLayer2"]
-position = Vector2( -400, -180 )
-scale = Vector2( 14, 5 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
-centered = false
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 640, 0 )
 
 [node name="GrassyHill" type="Sprite" parent="ParallaxLayer3"]
-position = Vector2( -400, 20 )
-scale = Vector2( 14, 5 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
-centered = false
