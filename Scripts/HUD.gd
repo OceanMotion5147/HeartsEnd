@@ -12,6 +12,8 @@ func _ready():
 func _on_ammo_collected():
 	coins = coins + 1
 	_ready()
+	if coins == 20:
+		get_tree().quit
 
 
 
